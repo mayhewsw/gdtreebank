@@ -10,8 +10,8 @@ import os
 from subprocess import call
 
 _arg_parser = argparse.ArgumentParser()
-_arg_parser.add_argument('--input', default='', type=str, action='store', help='Input treebank for training')
-_arg_parser.add_argument('--spec', default='', type=str, action='store', help='')
+_arg_parser.add_argument('--input', type=str, action='store', help='Input treebank for training', required=True)
+_arg_parser.add_argument('--spec', type=str, action='store', help='', required=True)
 _arg_parser.add_argument('--mem', default='8g', type=str, action='store', help='Memory for translating. (default=8g)')
 _arg_parser.add_argument('--output', default='', type=str, action='store', help='Ontput treebank after permutation:\n'
                                                                                 '(default) input-spec.conllu')
